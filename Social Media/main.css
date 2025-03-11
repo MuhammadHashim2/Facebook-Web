@@ -1,0 +1,278 @@
+ul{
+    list-style: none;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.navBar{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+body{
+    background-color: whitesmoke;
+}
+img{
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+ul li a{
+    color: rgba(128, 128, 128, 0.884);
+    font-weight: 100;
+}
+ul li a span:active{
+    color: #0866FF;
+    text-decoration: underline;
+    text-decoration-color: #0866FF;
+}
+span.active{
+    color: #0866FF;
+    text-decoration: underline;
+    text-decoration-color: #0866FF;
+}
+svg#active{
+    color: #0866FF;
+    text-decoration: underline;
+    text-decoration-color: #0866FF; 
+}
+ul li a span:hover{
+    color: #0866FF;
+    text-decoration: underline;
+    text-decoration-color: #0866FF;
+}
+ul li a svg:active{
+    color: #0866FF;
+    text-decoration: underline;
+    text-decoration-color: #0866FF;
+}
+ul li a svg:hover{
+    color: #0866FF;
+    text-decoration: underline;
+    text-decoration-color: #0866FF;
+}
+span.material-symbols-outlined, span.material-symbols-rounded{
+    font-size: 30px;
+}
+svg{
+    width: 30px;
+    height: 30px;
+}
+input[type="text"]{
+    width: 200px;
+    height: 15px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.107);
+    font-size: large;
+    padding: 10px;
+    padding-left: 45px;
+    border-radius: 25px;
+    outline: none;
+    margin-top: 10px;
+    margin-left: 16px;
+}
+span.chn{
+    position: absolute;
+    left: 74px;
+    color: rgba(128, 128, 128, 0.612);
+    font-size: 25px;
+    cursor: pointer;
+    top: 16px;
+}
+ul{
+    margin-left: 60px;
+    margin-right: 20px;
+    display: flex;
+    gap: 82px;
+    justify-content: center;
+    align-items: center;
+}
+span.right{
+    display: flex;
+    gap: 45px;
+    width: 50px;
+    margin-left: 20px;
+    color: (128 128 128 / 88%);
+    cursor: pointer;
+}
+span.right:hover{
+    color: #0866FF;
+}
+button{
+    cursor: pointer;
+}
+.posts{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
+    margin-left: 25%;
+}
+.post{
+  background-color: white;
+  padding: 10px;
+  border-radius: 2%;
+  margin-left: 50px;
+  border: 1px solid whitesmoke;
+  width: 600px;
+  min-height: 400px;
+  margin-bottom: 25px;
+}
+img.logoo{
+   border: 1px solid whitesmoke;
+   min-width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+div.title{
+    margin-top: 21px;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: 550;
+    color: rgb(19, 19, 147);
+}
+div.postheader{
+    display: flex;
+}
+p.postText{
+    padding: 20px;
+    padding-top: 0;
+    font-weight: 525;
+}
+img.postimg{
+    width: 250px;
+    height: 150px;
+    border-radius: 16px;
+    border: 2px solid whitesmoke;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+div.postfooter{
+    padding: 10px;
+    padding-bottom: 5px;
+}
+span.first{
+    color: white;
+    background-color: red;
+    margin-left: -15px;
+    margin-right: 45px;
+    width: 30px;
+    padding: 5px;
+    height: 30px;
+    border-radius: 50%;
+}
+span.one{
+    background-color: #0866FF;
+    color: white;
+    width: 30px;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    border-radius: 50%;
+}
+span.two{
+    color: gray;
+    margin-right: 45px;
+
+}
+span.three{
+    color: gray;
+}
+span.emojiestext{
+    margin-top: -30px;
+    color: gray;
+    font-size: 14px;
+}
+span.em1{
+    margin-left: -38px;
+    margin-right: 40px;
+}
+span.em2{
+    margin-left: -38px;
+    margin-right: 40px;
+}
+span .first,.one, .two, .three{
+    cursor: pointer;
+}
+span .first:hover, span.one:hover{
+    scale: 0.01;
+}
+span .navbarlogo{
+    margin-left: -13px;
+    margin-top: -5px;
+}
+.dop{
+    margin-left: -25px;
+    margin-top: 3px;
+}
+div.more{
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 200px;
+}
+button.receiveRequests:hover, button.logout{
+    background-color: #87cefa81;
+}
+button.receiveRequests, button.logout, button.createPost{
+    background-color: #87cefa4f;
+    width: 180px;
+    height: 35px;
+    padding: 10px;
+    color: dodgerblue;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border: none;
+}
+div.more span {
+    float: right;
+    margin-left: 180px;
+}
+button.createPost{
+    margin: 50px 0 100px 50px;
+}
+footer{
+    background-color: white;
+    padding: 5px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer p.two{
+    text-align: center;
+}
+button.three{
+    background-color: #87cefa4f;
+    width: 180px;
+    height: 35px;
+    padding: 10px;
+    color: dodgerblue;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border: none;
+}
+div.logo p {
+    margin-left: 70px;
+    margin-top: -36px;
+    font-size: large;
+}
+div.requestreceive{
+    width: 256px;
+    float: right;
+    padding: 5px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 12px;
+    height: 120px;
+    background-color: white;
+}

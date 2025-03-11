@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+    <link rel="shortcut icon" href="../iconfb.png" type="image/x-icon">
+    <style>
+        ul.cng{
+            margin-left: 22px;
+        }
+        div.leftsider{
+            margin-top: 50px;
+            height: 100vh;
+            float: left;
+            position: fixed;
+            margin-left: -10px;
+            padding: 10px;
+            padding-left: 12px;
+            width: 230px;
+            background-color: white;
+        }
+        .lo{
+            margin-left: 0;
+        }
+        .watch{
+            font-size: 38px !important;
+            margin-top: 16px;
+            color: #6278fe;
+            margin-right: 2px;
+        }
+        .logosidetext{
+            display: inline-block;
+            margin-left: 12px;
+            margin-top: 23px;
+            font-weight: bold;
+        }
+        div.subsidebarheading{
+            display: flex;
+            cursor: pointer;
+        }
+        div.subsidebarheading:hover{
+            color: #6277feb7;
+        }
+        span.e{
+            color: red !important;
+        }
+        span.frmemo{
+            color: #22c1c3;
+        }
+        div.requestdiv{
+            display: inline-block;
+            margin-top: 80px;
+            margin-left: 10px;
+            border-radius: 3%;
+            margin-right: 10px;
+            background-color: white;
+            width: 640px;
+            min-height: 400px;
+            margin-bottom: 20px;
+            padding: 30px;
+        }
+        div.requestbox{
+            width: 200px;
+            min-height: 300px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-radius: 8px;
+            background-color: ghostwhite;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        div.requestboximg img{
+            width: 200px;
+            height: 180px;
+            border-radius: 8px 8px 0 0;
+            margin: 0;
+        }
+        div.requestboxhd h4{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        div.requestboxreqfrd button:hover{
+            background-color: #87cefa81;
+        }
+        div.requestboxreqfrd button{
+            background-color: #87cefa4f;
+            width: 180px;
+            height: 35px;
+            padding: 10px;
+            color: dodgerblue;
+            font-size: 14px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            border: none;
+        }
+        div.requestboxremfrd button:hover{
+            background-color: #a9a9a99a;
+        }
+        div.requestboxremfrd button{
+            width: 180px;
+            height: 35px;
+            padding: 10px;
+            background-color: #a9a9a970;
+            font-size: 14px;
+            border-radius: 6px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: none;
+        }
+        div.countrequest{
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-left: 60px;
+            background-color: #6278fe;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            padding: 5px;
+        }
+        div.requestedboxreqfrd button:hover{
+            background-color: #87cefa81;
+        }
+        div.requestedboxreqfrd button{
+            background-color: #87cefa4f;
+            width: 180px;
+            height: 35px;
+            padding: 10px;
+            color: dodgerblue;
+            font-size: 14px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            border: none;
+        }
+        div.requests{
+            flex-direction: column;
+            float: right;
+            margin-top: 70px;
+            display: flex;
+        }
+        div.requestreceive h4{
+            display: inline-block;
+            margin-left: 5px;
+        }
+        button.acceptbtn{
+            background-color: #87cefa4f;
+            width: 180px;
+            height: 35px;
+            padding: 10px;
+            color: dodgerblue;
+            font-size: 14px;
+            margin-left: 35px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            border: none;
+        }
+        div.requestreceive img{
+            float: left;
+        }
+        div.requestdiv{
+            margin-left: 21%;
+            margin-right: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="navBar">
+        <img src="https://static.xx.fbcdn.net/rsrc.php/yx/r/e9sqr8WnkCf.ico" alt="">
+        <span class="material-symbols-outlined chn">
+            search
+            </span>
+        <input type="text" placeholder="Search">
+        <ul class="cng">
+            <li><a href="main.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+            <li><a href="#about"><span class="material-symbols-outlined">
+                smart_display
+                </span></a></li>
+            <li><a href="#services"><span class="material-symbols-outlined">
+                storefront
+                </span></a></li>
+                <li><a href="#contact"><svg id="active" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-button-background);"><path d="M12 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path><path d="M12 .5C5.649.5.5 5.649.5 12S5.649 23.5 12 23.5 23.5 18.351 23.5 12 18.351.5 12 .5zM3.34 8.088A9.502 9.502 0 0 1 12 2.5a9.502 9.502 0 0 1 8.66 5.588 4.001 4.001 0 0 0 0 7.824 9.514 9.514 0 0 1-1.755 2.613A5.002 5.002 0 0 0 14 14.5h-4a5.002 5.002 0 0 0-4.905 4.025 9.515 9.515 0 0 1-1.755-2.613 4.001 4.001 0 0 0 0-7.824z"></path></svg>
+
+            <li><a href="#contact"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-icon);"><path d="M18.5 1A1.5 1.5 0 0 0 17 2.5v3A1.5 1.5 0 0 0 18.5 7h3A1.5 1.5 0 0 0 23 5.5v-3A1.5 1.5 0 0 0 21.5 1h-3zm0 8a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 21.5 9h-3zm-16 8A1.5 1.5 0 0 0 1 18.5v3A1.5 1.5 0 0 0 2.5 23h3A1.5 1.5 0 0 0 7 21.5v-3A1.5 1.5 0 0 0 5.5 17h-3zm8 0A1.5 1.5 0 0 0 9 18.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3zm8 0a1.5 1.5 0 0 0-1.5 1.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3a1.5 1.5 0 0 0-1.5-1.5h-3zm-16-8A1.5 1.5 0 0 0 1 10.5v3A1.5 1.5 0 0 0 2.5 15h3A1.5 1.5 0 0 0 7 13.5v-3A1.5 1.5 0 0 0 5.5 9h-3zm0-8A1.5 1.5 0 0 0 1 2.5v3A1.5 1.5 0 0 0 2.5 7h3A1.5 1.5 0 0 0 7 5.5v-3A1.5 1.5 0 0 0 5.5 1h-3zm8 0A1.5 1.5 0 0 0 9 2.5v3A1.5 1.5 0 0 0 10.5 7h3A1.5 1.5 0 0 0 15 5.5v-3A1.5 1.5 0 0 0 13.5 1h-3zm0 8A1.5 1.5 0 0 0 9 10.5v3a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 13.5 9h-3z"></path></svg>
+                </a></li>  
+            <span class="right">
+                <span class="material-symbols-outlined">
+                    add
+                    </span>    
+            <li><a href="#contact"><svg viewBox="0 0 12 13" width="20" height="20" fill="currentColor" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-icon);"><g fill-rule="evenodd" transform="translate(-450 -1073)"><path d="m459.603 1077.948-1.762 2.851a.89.89 0 0 1-1.302.245l-1.402-1.072a.354.354 0 0 0-.433.001l-1.893 1.465c-.253.196-.583-.112-.414-.386l1.763-2.851a.89.89 0 0 1 1.301-.245l1.402 1.072a.354.354 0 0 0 .434-.001l1.893-1.465c.253-.196.582.112.413.386M456 1073.5c-3.38 0-6 2.476-6 5.82 0 1.75.717 3.26 1.884 4.305.099.087.158.21.162.342l.032 1.067a.48.48 0 0 0 .674.425l1.191-.526a.473.473 0 0 1 .32-.024c.548.151 1.13.231 1.737.231 3.38 0 6-2.476 6-5.82 0-3.344-2.62-5.82-6-5.82"></path></g></svg></a></li>
+  
+            <li><a href="#contact"><span class="material-symbols-rounded">
+                notifications
+                </span></a></li>
+                <img class="logoo navbarlogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s">
+                <span class="material-symbols-outlined dop">
+                    arrow_drop_down
+                    </span>    
+            </span>
+             </a></li> 
+        </ul>
+    </div>
+
+    <div class="leftsider">
+        <div class="subsidebarheading"><div><img class="logoo navbarlogo lo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s">
+        </div> <div class="logosidetext">Muhammad Hashim</div> </div>
+        <div class="subsidebarheading"><div><span class="material-symbols-outlined watch">
+            live_tv
+            </span></div><div class="logosidetext">Watch</div></div>
+        <div><div class="subsidebarheading"><div><span class="material-symbols-outlined watch e">
+                event
+                </span>
+           </div><div class="logosidetext">Events</div></div></div>
+        <div><div class="subsidebarheading"><div><span class="material-symbols-outlined watch frmemo">
+                group
+                </span>
+           </div><div class="logosidetext">Friends <div class="countrequest">1</div> </div></div></div>
+            <div><div class="subsidebarheading"><div><span class="material-symbols-outlined watch frmemo">
+                history           
+                </span></div><div class="logosidetext">Memories</div></div></div>    
+    </div>
+<div class="requestdiv">
+<h2>People You May Know</h2>
+<!-- <div class="requestbox">
+    <div class="requestboximg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s" alt=""></div>
+    <div class="requestboxhd"><h4>Muhammad Hashim</h4></div>
+    <div class="requestboxreqfrd"><button>Add Friend</button></div>
+    <div class="requestboxremfrd"><button>Remove Friend</button></div>
+</div>
+<div class="requestbox">
+    <div class="requestboximg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s" alt=""></div>
+    <div class="requestboxhd"><h4>Muhammad Hashim</h4></div>
+    <div class="requestboxreqfrd"><button>Add Friend</button></div>
+    <div class="requestboxremfrd"><button>Remove Friend</button></div>
+</div> -->
+<!-- <div class="requestbox">
+    <div class="requestboximg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s" alt=""></div>
+    <div class="requestboxhd"><h4>Muhammad Hashim</h4></div>
+    <div class="requestboxreqfrd"><button>Add Friend</button></div>
+    <div class="requestboxremfrd"><button>Remove Friend</button></div>
+</div>
+<div class="requestbox">
+    <div class="requestboximg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s" alt=""></div>
+    <div class="requestboxhd"><h4>Muhammad Hashim</h4></div>
+    <div class="requestboxreqfrd"><button>Add Friend</button></div>
+    <div class="requestboxremfrd"><button>Remove Friend</button></div>
+</div> -->
+<!-- <div class="requestbox">
+    <div class="requestboximg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s" alt=""></div>
+    <div class="requestboxhd"><h4>Muhammad Hashim</h4></div>
+    <div class="requestboxreqfrd"><button>Add Friend</button></div>
+    <div class="requestboxremfrd"><button>Remove Friend</button></div>
+</div> -->
+<div class="requestbox none">
+    <div class="requestboximg"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBbvGBn5GIP-XuRshaY--ELTa7EeIP99ajyQ&s" alt=""></div>
+    <div class="requestboxhd"><h4>Muhammad Hashim</h4></div>
+    <div class="requestboxreqfrd"><button class="mail">Add Friend</button></div>
+    <div class="requestboxremfrd"><button>Remove Friend</button></div>
+</div>
+</div>
+<div class="requests">
+<!-- <div class="requestreceive"><img class="logoo" src="data:image/jpeg;base64,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" alt="">
+<h4>Muhammad Hashim</h4>
+<button class="acceptbtn">Accept</button>
+</div> -->
+</div>
+    <script type="module" src="./sendfriendrequest.js"></script>
+    <script type="module" src="./friendrequestpage.js"></script>
+</body>
+</html>
+
+
+
